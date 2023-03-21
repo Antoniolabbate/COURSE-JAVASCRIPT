@@ -1,11 +1,11 @@
 function printName() {
-  var helloName = "Hello John";
+  let helloName = "Hello John";
   function inner() {
-    return helloName;
-  }
-  setTimeout(function() {
-    console.log(inner());
+      setTimeout(() => {
+      console.log(helloName);
   }, 1000);
+  }
+  return inner;
 }
 
-printName();
+printName()();
