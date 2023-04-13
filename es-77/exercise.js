@@ -17,7 +17,10 @@ function secondPromise(arg) {
         }
     })
 }
-firstPromise().then(element1 => secondPromise(element1)) .then(element => console.log(element)) .catch(err => console.log(err)) 
+firstPromise()
+.then(element1 => secondPromise(element1))
+ .then(element => console.log(element))
+  .catch(err => console.log(err)) 
  
 
 
