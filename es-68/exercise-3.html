@@ -23,9 +23,9 @@
   
 
 
-  const form = document.querySelector("form");
-  const input = document.querySelector("#todo-title");
-  const checkbox = document.querySelector("#todo-completed");
+  const button = document.querySelector("button");
+  const input = document.getElementById("todo-title");
+  const checkbox = document.getElementById("todo-completed");
 
   async function post(event) {
     event.preventDefault();
@@ -36,12 +36,13 @@
       },
       body: JSON.stringify({
         title: input.value,
-        completed: checkbox.checked,
+        completed: true,
       }),
     });
     const data = await response.json();
     console.log(data);
+    checkbox.checked = data.completed
   }
-  form.addEventListener("submit", post);
+  button.addEventListener("click", post);
 
 </script>
