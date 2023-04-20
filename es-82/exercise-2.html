@@ -20,6 +20,10 @@
 </html>
 
 <script>
-  let val = document.querySelector("form")
-  console.log(val)
+  let val = document.getElementsByClassName("form-input")
+  for(let element of val){
+    console.log(element.value)
+  }
+
+  
 </script>
